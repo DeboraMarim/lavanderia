@@ -1,0 +1,213 @@
+.recepcao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    flex-direction: column;
+  }
+  
+  .recepcao-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #75048a;
+    
+  }
+  
+  .password-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn-recep {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px; 
+    background-color: #75048a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .submit-btn-recep:hover {
+    background-color: #f9e604;
+  }
+  
+  .recepcao-content {
+    padding: 20px;
+  }
+  
+
+  /********************************* header
+
+
+  /* Header */
+.recepcao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fffeff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.082);
+  }
+  
+  .admin-logo {
+    height: 50px; /* Ajuste conforme necessário */
+  }
+  
+  /* Botões do Header */
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .header-btn {
+    padding: 10px 15px;
+    background: #f9e604;
+    color: #080808;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .header-btn:hover {
+    background: #faa105;
+  }
+  
+  /* Botão de Logout com cor diferente */
+  .logout-btn {
+    background: #ec1034;
+    color: white;
+  }
+  
+  .logout-btn:hover {
+    background: #faa105;
+  }
+
+  /* Estilo do contêiner da recepção */
+.recepcao-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Estilização do cabeçalho */
+.recepcao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #fffeff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recepcao-logo {
+  height: 50px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.header-btn {
+  padding: 10px 15px;
+  background: #f9e604;
+  color: #080808;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.header-btn:hover {
+  background: #faa105;
+}
+
+/* Estilo das abas */
+.recepcao-tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #75048a;
+  padding: 10px 0;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Cores específicas para cada aba */
+.tab-precos {
+  background-color: #faa105;
+}
+
+.tab-pedidos {
+  background-color: #2060de;
+}
+
+.tab-clientes {
+  background-color: #2ebe07;
+}
+
+.tab-button.active {
+  border-bottom: 3px solid white;
+}
+
+/* Estilo do conteúdo das abas */
+.recepcao-content {
+  padding: 20px;
+  flex: 1;
+}
+
+
+.admin-content {
+  padding: 20px;
+}
+
+.admin-menu {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  color: #ccc;
+
+}
+
+.admin-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-menu li {
+  margin-bottom: 10px;
+}

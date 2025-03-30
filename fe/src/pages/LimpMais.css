@@ -1,0 +1,55 @@
+.limpmais-container {
+    text-align: center;
+    background-color: #f9f9f9; /* Fundo claro */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #75048a; /* Roxo principal */
+    margin-bottom: 20px;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Cores para os cards */
+  .recepcao {
+    background-color: #faa105; /* Laranja */
+  }
+  
+  .painel-pda {
+    background-color: #2060de; /* Azul */
+  }
+  
+  .administracao {
+    background-color: #2ebe07; /* Verde */
+  }
+  

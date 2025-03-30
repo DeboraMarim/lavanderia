@@ -1,0 +1,172 @@
+h2{ 
+  text-align: center;
+}
+
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .admin-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #75048a;
+  }
+  
+  .password-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #faa105;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #f9e604;
+  }
+  
+  .admin-content {
+    padding: 20px;
+  }
+  
+  /* Header */
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fffeff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.082);
+  }
+  
+  .admin-logo {
+    height: 50px; /* Ajuste conforme necessário */
+  }
+  
+  /* Botões do Header */
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .header-btn {
+    padding: 10px 15px;
+    background: #f9e604;
+    color: #080808;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .header-btn:hover {
+    background: #faa105;
+  }
+  
+  /* Botão de Logout com cor diferente */
+  .logout-btn {
+    background: #ec1034;
+    color: white;
+  }
+  
+  .logout-btn:hover {
+    background: #faa105;
+  }
+  
+  /* Menu de navegação */
+  .admin-menu {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    color: #ccc;
+
+  }
+  
+  .admin-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu-btn {
+    padding: 10px 20px;
+    background-color: #75048a;
+    color: #f9e604;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 100%;
+  }
+  
+  .menu-btn:hover {
+    background-color: #f9e604;
+    color: #080808;
+  }
+  
+  .menu-btn.servicos {
+    background-color: #faa105;
+    color: #080808;
+  }
+  
+  .menu-btn.servicos:hover {
+    background-color: #f9e604;
+  }
+  
+  .menu-btn.pedidos {
+    background-color: #2060de;
+    color: #f9e604;
+  }
+  
+  .menu-btn.pedidos:hover {
+    background-color: #f9e604;
+    color: #080808;
+  }
+  
+  .menu-btn.relatorios {
+    background-color: #2ebe07;
+    color: #080808;
+  }
+  
+  .menu-btn.relatorios:hover {
+    background-color: #f9e604;
+    color: #080808;
+  }
+  
+  .menu-btn.configuracoes {
+    background-color: #ec1034;
+    color: #f9e604;
+  }
+  
+  .menu-btn.configuracoes:hover {
+    background-color: #f9e604;
+    color: #080808;
+  }
+  
