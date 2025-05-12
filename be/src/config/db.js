@@ -1,11 +1,12 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import mongoose from "mongoose"; // Usando import aqui
+import mongoose from "mongoose";
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
+    const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/LAVANDERIA";
+    await mongoose.connect(mongoUri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -16,4 +17,4 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB; // Usando export default aqui
+export default connectDB;

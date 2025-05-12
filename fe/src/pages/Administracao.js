@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Administracao.css";
+// import logo from "../../public/logo.png";
 
 import Clientes from "../components/abaAdm/Clientes.jsx";
 import Servicos from "../components/abaAdm/Servicos.jsx";
@@ -60,8 +61,8 @@ const Administracao = () => {
     <div className="admin-page">
       {/* Header */}
       <header className="admin-header">
-        <img src="/logo.png" alt="Logo" className="admin-logo" />
-        <div className="header-buttons">
+      <img src="../../public/logo.png" alt="Logo" className="admin-logo" />
+      <div className="header-buttons">
           <button className="header-btn" onClick={handleGoToGeral}>
             Geral
           </button>
@@ -105,13 +106,13 @@ const Administracao = () => {
             Relatórios
           </button>
 
-          <button
+          {/* <button
             className={`menu-btn ${activeTab === "configuracoes" ? "active" : ""}`}
             style={{ backgroundColor: "#ec1034", color: "#fff" }}
             onClick={() => setActiveTab("configuracoes")}
           >
             Configurações
-          </button>
+          </button> */}
         </nav>
 
         {/* Conteúdo das abas */}

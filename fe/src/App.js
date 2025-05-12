@@ -5,6 +5,7 @@ import LimpMais from "./pages/LimpMais.js"; // Criar essa página
 import Recepcao from "./pages/Recepcao.js";
 import PainelPDA from "./pages/PainelPDA.js";
 import Administracao from "./pages/Administracao.js";
+import "./App.css";
 
 function App() {
   return (

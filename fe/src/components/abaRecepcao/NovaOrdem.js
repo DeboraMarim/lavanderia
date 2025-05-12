@@ -156,7 +156,7 @@ const NovaOrdem = () => {
   
   
   return (
-    <div className="pedido-container">
+    <div >
       <div className="formulario-topo">
         <h2>Ordem de Serviço</h2>
 

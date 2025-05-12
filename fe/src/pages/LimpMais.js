@@ -9,13 +9,13 @@ const LimpMais = () => {
     <div className="limpmais-container">
       <h1>Escolha sua área de entrada</h1>
       <div className="cards-container">
-        <div className="card recepcao" onClick={() => navigate("/recepcao")}>
+        <div className="card-recepcao" onClick={() => navigate("/recepcao")}>
           Recepção
         </div>
-        <div className="card painel-pda" onClick={() => navigate("/painel-pda")}>
+        <div className="card-pda" onClick={() => navigate("/painel-pda")}>
           Painel PDA
         </div>
-        <div className="card administracao" onClick={() => navigate("/administracao")}>
+        <div className="card-administracao" onClick={() => navigate("/administracao")}>
           Administração
         </div>
       </div>

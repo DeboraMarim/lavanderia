@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-
-export class Pedidos extends Component {
+import Pedidos from '../abaRecepcao/Pedidos'
+export class PedidosContent extends Component {
   render() {
     return (
       <div>
-        <h2>Lista de Pedidos</h2>
+        <Pedidos />
       </div>
     )
   }
 }
 
-export default Pedidos
+export default PedidosContent

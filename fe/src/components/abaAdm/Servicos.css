@@ -10,7 +10,7 @@ table {
   }
   
   thead {
-    background-color: #0a498d;
+    background-color: #106aca;
     color: white;
   }
   
@@ -76,3 +76,132 @@ table {
     color: #343a40;
   }
   
+  /* modal */
+
+
+  /* Modal Overlay (fundo transparente) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Content (caixa de conteúdo da modal) */
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px; /* Bordas mais arredondadas */
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombras mais suaves e grandes */
+  position: relative;
+}
+
+/* Título da Modal */
+.modal-content h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.6em;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Estilo para inputs e selects dentro da modal */
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  color: #333;
+  background-color: #f7f7f7;
+  transition: all 0.3s ease; /* Transição suave para foco e hover */
+  box-sizing: border-box;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  outline: none;
+  border-color: #2060de; /* Azul vibrante ao focar */
+  background-color: #ffffff; /* Fundo branco no foco */
+  box-shadow: 0 0 10px rgba(32, 96, 222, 0.3); /* Sombra ao focar */
+}
+
+/* Placeholder estilizado */
+.modal-content input::placeholder,
+.modal-content select::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+/* Estilo para input de tipo number (quantidade/peso) */
+.modal-content input[type="number"] {
+  -moz-appearance: textfield; /* Remover setas no input */
+  appearance: textfield;
+}
+
+.modal-content input[type="number"]::-webkit-outer-spin-button,
+.modal-content input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Botões de ação */
+.modal-content button {
+  padding: 12px 25px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2060de;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  font-weight: 600;
+}
+
+.modal-content button:hover {
+  background-color: #1748a3;
+  transform: translateY(-2px); /* Levantar botão ao passar o mouse */
+}
+
+.modal-content button:active {
+  transform: translateY(2px); /* Efeito de pressão no clique */
+}
+
+/* Botão de fechar */
+.modal-content button.close-btn {
+  background-color: #f44336;
+}
+
+.modal-content button.close-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive Design para Modal */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .modal-content h3 {
+    font-size: 1.4em;
+  }
+
+  .modal-content input,
+  .modal-content select,
+  .modal-content button {
+    font-size: 14px;
+  }
+}

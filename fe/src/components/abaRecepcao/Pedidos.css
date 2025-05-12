@@ -1,175 +1,371 @@
-/* Estilo da página de pedidos */
 .pedido-container {
-    padding: 20px;
-  }
-  
-  .formulario-topo {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  .formulario-topo h2 {
-    margin-bottom: 10px;
-  }
-  
-  .formulario-topo label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
-  
-  .formulario-topo input,
-  .formulario-topo select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  /* Filtro de busca */
-  .filtro-busca {
-    margin-bottom: 20px;
-  }
-  
-  .filtro-busca input {
-    padding: 12px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  /* Lista de itens */
-  .itens-lista {
-    margin-top: 20px;
-  }
-  
-  .lista-servicos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .linha-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .linha-item input {
-    width: 100px;
-  }
-  
-  /* Resumo do pedido */
-  .resumo-pedido {
-    margin-top: 20px;
-  }
-  
-  .resumo-pedido ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .resumo-pedido li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .resumo-pedido button {
-    background-color: #ff4d4d;
-    border: none;
-    padding: 5px 10px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .resumo-pedido button:hover {
-    background-color: #cc0000;
-  }
-  
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
-  /* .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 600px;
-  }
-  
-  .modal-content ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .modal-content li {
-    padding: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .modal-content li:hover {
-    background: #f0f0f0;
-  }
-   */
+/* Estilização dos botões no topo */
+.botao-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-   .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    display: flex;
+.botao {
+  background: #2060de;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao:hover {
+  background: #154bb3;
+}
+
+/* Estilização da tabela */
+.tabela-container {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabela th,
+.tabela td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabela th {
+  background: #2060de;
+  color: white;
+  font-weight: bold;
+}
+
+.tabela tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.tabela tr:hover {
+  background: #eef3ff;
+}
+
+/* Estilização dos checkboxes */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #2060de;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+  background: #2060de;
+  border-color: #2060de;
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+  content: "✔";
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilização dos dropdowns */
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.dropdown:focus {
+  border-color: #2060de;
+  outline: none;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .botao-container {
     flex-direction: column;
   }
-  
-  .modal input, .modal select {
-    margin: 5px 0;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .modal-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  ul h4:hover {
-    cursor: pointer;
-    background-color: #797676;
+
+  .botao {
+    width: 100%;
   }
 
-  ul h4 {
-    cursor: pointer;
-    background-color: #ebebeb;
-    padding: 5%;
+  .tabela th,
+  .tabela td {
+    padding: 8px;
+    font-size: 14px;
   }
+}
+
+
+.formulario-topo {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.formulario-topo h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2060de;
+}
+
+.formulario-topo label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+.formulario-topo button {
+  background-color: #2060de;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.formulario-topo button:hover {
+  background-color: #154bb3;
+}
+
+.formulario-topo select,
+.formulario-topo input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.formulario-topo select:focus,
+.formulario-topo input[type="text"]:focus {
+  border-color: #2060de;
+  outline: none;
+}
+
+.formulario-topo p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.formulario-topo div {
+  margin-bottom: 20px;
+}
+
+.formulario-topo div p strong {
+  color: #2060de;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .formulario-topo {
+    padding: 15px;
+  }
+
+  .formulario-topo h2 {
+    font-size: 20px;
+  }
+
+  .formulario-topo button {
+    width: 100%;
+  }
+
+  .formulario-topo select,
+  .formulario-topo input[type="text"] {
+    font-size: 14px;
+  }
+}
+
+
+/* Estilizando os inputs de quantidade e peso */
+tbody input[type="number"] {
+  width: 90px;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+/* Foco nos inputs */
+tbody input[type="number"]:focus {
+  border-color: #2060de;
+  outline: none;
+}
+
+/* Estilo específico para o input de peso */
+tbody input[type="number"]:nth-of-type(2) {
+  width: 110px;
+}
+
+/* Ajuste no estilo dos inputs quando estiverem vazios */
+tbody input[type="number"]:invalid {
+  border-color: #ff6347; /* Cor de alerta (tom laranja) */
+}
+
+/* Responsividade: Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+  tbody input[type="number"] {
+    width: 80px;
+    font-size: 12px;
+  }
+
+  tbody input[type="number"]:nth-of-type(2) {
+    width: 100px;
+  }
+}
+
+
+
+/*  */
+
+/* Estilizando os selects de status e pagamento */
+tbody select {
+  width: 160px;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+/* Foco nos selects */
+tbody select:focus {
+  background-color: #e8f0fe; /* Fundo claro quando em foco */
+}
+
+/* Estilo para o select de Status de Pagamento */
+tbody select:nth-of-type(1) {
+  background-color: #f1f1f1; /* Fundo mais claro */
+}
+
+/* Estilo para o select de Status do Pedido */
+tbody select:nth-of-type(2) {
+  background-color: #e1f3d8; /* Fundo claro para status do pedido */
+}
+
+/* Estilo específico para quando o campo estiver desabilitado (se aplicável) */
+tbody select:disabled {
+  background-color: #e0e0e0; /* Fundo desabilitado */
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+/* Responsividade: Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+  tbody select {
+    width: 140px;
+    font-size: 12px;
+  }
+}
+
+/* Estilo para o campo de busca */
+.modal input {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Estilo para o foco do campo de busca */
+.search:focus {
+  outline: none;
+  border-color: #2060de;
+  background-color: #fff;
+}
+
+/* Placeholder */
+.search::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Estilo para quando o campo de busca não tem valor */
+.search:empty {
+  color: #888;
+}
+
+
+.filtro-busca input {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.filtro-busca input:focus {
+  outline: none;
+  border-color: #2060de;
+  background-color: #fff;
+}
+
+.filtro-busca input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.filtro-busca input:empty {
+  color: #888;
+}

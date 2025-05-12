@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Precos from "../components/abaRecepcao/Precos.jsx";
-import Pedidos from "../components/abaRecepcao/Pedidos.jsx";
+import PedidosContent from "../components/abaRecepcao/Pedidos.jsx";
 import Clientes from "../components/abaRecepcao/Clientes.jsx";
 import Inicio from "../components/abaRecepcao/Inicio.jsx";
 import "./Recepcao.css";
@@ -10,7 +10,7 @@ import "./Recepcao.css";
 const Recepcao = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
-  const [activeTab, setActiveTab] = useState("Preços");
+  const [activeTab, setActiveTab] = useState("inicio");
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -78,13 +78,13 @@ const Recepcao = () => {
             Inicio
           </button>
 
-          <button
+          {/* <button
             className={`menu-btn ${activeTab === "precos" ? "active" : ""}`}
             style={{ backgroundColor: "#faa105", color: "#fff" }}
             onClick={() => setActiveTab("precos")}
           >
             Preços
-          </button>
+          </button> */}
 
           <button
             className={`menu-btn ${activeTab === "pedidos" ? "active" : ""}`}
@@ -106,9 +106,9 @@ const Recepcao = () => {
 
         </nav>
         <main className="admin-content">
-          {activeTab === "inicio" && <Inicio />}
-          {activeTab === "precos" && <Precos />}
-          {activeTab === "pedidos" && <Pedidos />}
+        {activeTab === "inicio" && <Inicio setActiveTab={setActiveTab} />}
+        {activeTab === "precos" && <Precos />}
+          {activeTab === "pedidos" && <PedidosContent />}
           {activeTab === "clientes" && <Clientes />}
         </main>
     </div>

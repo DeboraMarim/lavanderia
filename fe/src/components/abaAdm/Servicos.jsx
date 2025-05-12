@@ -143,7 +143,7 @@ const Servicos = () => {
             Adicionar Categoria
           </button>
 
-          <table border="1" width="100%" style={{ marginTop: "20px" }}>
+          <table className="table">
             <thead>
               <tr>
                 <th>Nome</th>
@@ -177,7 +177,7 @@ const Servicos = () => {
       {categorias.map((categoria) => (
         <div key={categoria._id} style={{ marginTop: "20px" }}>
           <h3>{categoria.nome}</h3>
-          <table border="1" width="100%">
+          <table className="table">
             <thead>
               <tr>
                 <th>Serviço</th>
@@ -214,65 +214,52 @@ const Servicos = () => {
 
       {/* Modal para adicionar Serviço */}
       {modalOpen && (
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          onClick={() => setModalOpen(false)} 
-        >
-          <div
-            style={{ background: "white", padding: "20px" }}
-            onClick={(e) => e.stopPropagation()} 
-          >
-            <h3>Adicionar Serviço</h3>
-            <input
-              type="text"
-              placeholder="Nome"
-              onChange={(e) =>
-                setNovoServico({ ...novoServico, nome: e.target.value })
-              }
-            />
-            <input
-              type="number"
-              placeholder="Preço"
-              onChange={(e) =>
-                setNovoServico({ ...novoServico, preco: e.target.value })
-              }
-            />
-            <select
-              onChange={(e) =>
-                setNovoServico({ ...novoServico, categoriaId: e.target.value })
-              }
-            >
-              <option value="">Selecione a Categoria</option>
-              {categorias.map((cat) => (
-                <option key={cat._id} value={cat._id}>
-                  {cat.nome}
-                </option>
-              ))}
-            </select>
-            <select
-              onChange={(e) =>
-                setNovoServico({ ...novoServico, tipo: e.target.value })
-              }
-              value={novoServico.tipo}
-            >
-              <option value="peça">Peça</option>
-              <option value="peso">Peso</option>
-            </select>
-            <button onClick={adicionarServico}>Salvar</button>
-            <button onClick={() => setModalOpen(false)}>Fechar</button>
-          </div>
-        </div>
-      )}
+  <div className="modal-overlay" onClick={() => setModalOpen(false)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <h3>Adicionar Serviço</h3>
+      <input
+        type="text"
+        placeholder="Nome"
+        onChange={(e) =>
+          setNovoServico({ ...novoServico, nome: e.target.value })
+        }
+      />
+      <input
+        type="number"
+        placeholder="Preço"
+        onChange={(e) =>
+          setNovoServico({ ...novoServico, preco: e.target.value })
+        }
+      />
+      <select
+        onChange={(e) =>
+          setNovoServico({ ...novoServico, categoriaId: e.target.value })
+        }
+      >
+        <option value="">Selecione a Categoria</option>
+        {categorias.map((cat) => (
+          <option key={cat._id} value={cat._id}>
+            {cat.nome}
+          </option>
+        ))}
+      </select>
+      <select
+        onChange={(e) =>
+          setNovoServico({ ...novoServico, tipo: e.target.value })
+        }
+        value={novoServico.tipo}
+      >
+        <option value="peça">Peça</option>
+        <option value="peso">Peso</option>
+      </select>
+      <button onClick={adicionarServico}>Salvar</button>
+      <button className="close-btn" onClick={() => setModalOpen(false)}>
+        Fechar
+      </button>
+    </div>
+  </div>
+)}
+
 
       {/* Modal para editar Serviço */}
       {modalEditServicoOpen && (

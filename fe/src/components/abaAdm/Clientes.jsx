@@ -137,7 +137,7 @@ const Clientes = () => {
         </button>
       </div>
 
-      <table className="clientes-table">
+      <table className="table">
         <thead>
           <tr>
             <th>Tipo</th>

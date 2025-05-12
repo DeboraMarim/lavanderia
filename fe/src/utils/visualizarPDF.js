@@ -24,14 +24,14 @@ const visualizarOrdem = (ordem, numero) => {
   // Agrupar itens por categoria
   const categorias = {};
   ordem.itens.forEach((item) => {
-    const categoriaNome = item.servicoId?.categoriaId?.nome || "Sem Categoria";
+    const categoriaNome = item.servicoId?.categoriaId?.nome || " ";
     if (!categorias[categoriaNome]) {
       categorias[categoriaNome] = [];
     }
     categorias[categoriaNome].push({
       nome: item.servicoId?.nome || "Serviço não encontrado",
       quantidade: item.quantidade || 0,
-      tipo: item.tipo || "Desconhecido",
+      tipo: item.tipo || " ",
       valorTotal: item.valorTotal || 0,
     });
   });

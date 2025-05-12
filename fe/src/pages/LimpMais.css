@@ -40,16 +40,64 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
   
-  /* Cores para os cards */
-  .recepcao {
-    background-color: #faa105; /* Laranja */
-  }
-  
-  .painel-pda {
-    background-color: #2060de; /* Azul */
-  }
-  
-  .administracao {
-    background-color: #2ebe07; /* Verde */
-  }
-  
+  /* cards */
+  /* cards */
+  /* cards */
+
+
+  /* Estilo base para os 3 cartões */
+.card-recepcao,
+.card-pda,
+.card-administracao {
+  color: white;
+  width: 200px;
+  height: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  border-radius: 10px;
+  font-size: 22px;
+  transition: all 0.3s ease; /* Transição suave para os efeitos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra inicial suave */
+}
+
+/* Efeito Hover para .card-recepcao */
+.card-recepcao {
+  background-color: #faa105; /* Laranja */
+}
+
+.card-recepcao:hover {
+  transform: translateY(-5px); /* Eleva o cartão */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+  background-color: #e68600; /* Laranja mais escuro no hover */
+}
+
+/* Efeito Hover para .card-pda */
+.card-pda {
+  background-color: #2060de; /* Azul */
+}
+
+.card-pda:hover {
+  transform: translateY(-5px); /* Eleva o cartão */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+  background-color: #1a4bb8; /* Azul mais escuro no hover */
+}
+
+/* Efeito Hover para .card-administracao */
+.card-administracao {
+  background-color: #2daf09; /* Verde */
+}
+
+.card-administracao:hover {
+  transform: translateY(-5px); /* Eleva o cartão */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+  background-color: #249f06; /* Verde mais escuro no hover */
+}
+
+/* Efeito Active (pressionado) para todos os cartões */
+.card-recepcao:active,
+.card-pda:active,
+.card-administracao:active {
+  transform: translateY(2px); /* Efeito de pressionamento */
+}

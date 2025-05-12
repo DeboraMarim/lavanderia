@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import gerarPDF from "../../utils/gerarPDF";
 import visualizarPDF from "../../utils/visualizarPDF";
-
+import "./Pedidos.css";
 
 const PedidosContent = () => {
   const [pedidos, setPedidos] = useState([]);
@@ -50,19 +50,22 @@ const PedidosContent = () => {
   return (
     <div>
       <h2>Pedidos</h2>
+      <div className="filtro-busca">
+
       <input
         type="text"
         placeholder="Buscar por nome ou CPF/CNPJ"
         value={filtroBusca}
         onChange={(e) => setFiltroBusca(e.target.value)}
       />
+      </div>
       <div>
         {['Pendente', 'Em andamento', 'Finalizado'].map((status) => (
           <div key={status}>
             <h3>{status}</h3>
             <table>
               <thead>
-                <tr>
+                <tr className="tabela">
                   <th>Número</th>
                   <th>Cliente</th>
                   <th>CPF/CNPJ</th>

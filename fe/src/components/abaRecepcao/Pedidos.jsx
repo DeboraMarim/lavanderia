@@ -5,7 +5,7 @@ import OrcamentoContent from "./OrcamentoContent";
 import "./Pedidos.css";
 
 const Pedidos = () => {
-  const [conteudoAtual, setConteudoAtual] = useState("");
+  const [conteudoAtual, setConteudoAtual] = useState("pedidos");
 
   const handleNovaOrdem = () => setConteudoAtual("novaOrdem");
   const handlePedidos = () => setConteudoAtual("pedidos");

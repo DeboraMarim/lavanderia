@@ -14,7 +14,11 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://sistema.lavanderialimpmais.com.br', // Atualize com o domínio correto
+  credentials: true
+}));
 app.use(bodyParser.json());
 app.use(express.json());
 
